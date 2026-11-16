@@ -1,0 +1,46 @@
+[
+  {"id":"gin","nome":"Gin","categoria":"destilado","teor":40,"apelidos":["gin","dry gin","london dry gin","gin seco"]},
+  {"id":"vodka","nome":"Vodka","categoria":"destilado","teor":40,"apelidos":["vodka","smirnoff vodka","vodca"]},
+  {"id":"rum-branco","nome":"Rum branco","categoria":"destilado","teor":40,"apelidos":["white rum","white cuban ron","cuban rum","rum cubano","ron blanco","rum prata"]},
+  {"id":"cachaca","nome":"Cachaça","categoria":"destilado","teor":40,"apelidos":["cachaça","cachaca","pinga"]},
+  {"id":"tequila","nome":"Tequila","categoria":"destilado","teor":40,"apelidos":["tequila","tequila 100% agave","100% agave tequila","tequila blanco"]},
+  {"id":"bourbon","nome":"Bourbon","categoria":"destilado","teor":43,"apelidos":["bourbon","bourbon whiskey","uísque bourbon"]},
+  {"id":"whiskey-rye","nome":"Rye whiskey","categoria":"destilado","teor":45,"apelidos":["rye whiskey","rye","whiskey de centeio","uísque de centeio"]},
+  {"id":"cognac","nome":"Cognac","categoria":"destilado","teor":40,"apelidos":["cognac","conhaque","brandy francês"]},
+  {"id":"pisco","nome":"Pisco","categoria":"destilado","teor":40,"apelidos":["pisco"]},
+  {"id":"absinto","nome":"Absinto","categoria":"destilado","teor":60,"apelidos":["absinthe","absinto","pernod","herbsaint"]},
+
+  {"id":"triple-sec","nome":"Triple sec","categoria":"licor","teor":40,"apelidos":["triple sec","cointreau","licor de laranja"]},
+  {"id":"licor-cafe","nome":"Licor de café","categoria":"licor","teor":20,"apelidos":["coffee liqueur","kahlúa","kahlua","licor de café"]},
+
+  {"id":"campari","nome":"Campari","categoria":"aperitivo","teor":25,"apelidos":["campari","bitter campari"]},
+  {"id":"aperol","nome":"Aperol","categoria":"aperitivo","teor":11,"apelidos":["aperol"]},
+  {"id":"cynar","nome":"Cynar","categoria":"aperitivo","teor":16.5,"apelidos":["cynar"]},
+  {"id":"vermute-rosso","nome":"Vermute rosso","categoria":"vinho","teor":16,"apelidos":["sweet red vermouth","sweet vermouth","sweet vermouth cinzano rosso","vermute tinto","vermute doce","vermute vermelho","cinzano rosso","martini rosso"]},
+  {"id":"vermute-seco","nome":"Vermute seco","categoria":"vinho","teor":18,"apelidos":["dry vermouth","vermute dry","vermute branco seco","martini extra dry","noilly prat"]},
+  {"id":"espumante","nome":"Espumante","categoria":"vinho","teor":12,"apelidos":["champagne","chilled champagne","prosecco","sparkling wine","brut","cava","champanhe"]},
+
+  {"id":"angostura","nome":"Angostura","categoria":"bitter","teor":44.7,"apelidos":["angostura","angostura bitters","aromatic bitters","bitter aromático"]},
+  {"id":"peychauds","nome":"Peychaud's","categoria":"bitter","teor":35,"apelidos":["peychaud's bitters","peychaud’s bitters","peychauds"]},
+
+  {"id":"limao","nome":"Limão","categoria":"fruta","teor":0,"apelidos":["lime","fresh lime","fresh lime juice","lime juice","freshly squeezed lime juice","suco de limão","limão taiti","limão tahiti"]},
+  {"id":"limao-siciliano","nome":"Limão siciliano","categoria":"fruta","teor":0,"apelidos":["lemon","fresh lemon juice","lemon juice","freshly squeezed lemon juice","suco de limão siciliano"]},
+  {"id":"abacaxi","nome":"Abacaxi","categoria":"fruta","teor":0,"apelidos":["pineapple","fresh pineapple juice","pineapple juice","suco de abacaxi"]},
+  {"id":"hortela","nome":"Hortelã","categoria":"erva","teor":0,"apelidos":["mint","mint leaves","mint sprigs","fresh mint","menta"]},
+
+  {"id":"acucar","nome":"Açúcar","categoria":"adoçante","teor":0,"apelidos":["sugar","white cane sugar","superfine sugar","sugar cube","caster sugar","açúcar refinado","açúcar cristal","açúcar em cubo"]},
+  {"id":"xarope-simples","nome":"Xarope simples","categoria":"adoçante","teor":0,"apelidos":["simple syrup","sugar syrup","xarope de açúcar","calda de açúcar"]},
+
+  {"id":"agua-com-gas","nome":"Água com gás","categoria":"misturador","teor":0,"apelidos":["soda water","club soda","soda","água gaseificada"]},
+  {"id":"refrigerante-cola","nome":"Refrigerante de cola","categoria":"misturador","teor":0,"apelidos":["cola","coca-cola","coca","pepsi"]},
+  {"id":"ginger-beer","nome":"Ginger beer","categoria":"misturador","teor":0,"apelidos":["ginger beer","cerveja de gengibre"]},
+  {"id":"agua","nome":"Água","categoria":"misturador","teor":0,"apelidos":["water","plain water","água filtrada"]},
+  {"id":"cafe","nome":"Café","categoria":"misturador","teor":0,"apelidos":["espresso","strong espresso","café espresso","coffee"]},
+
+  {"id":"ovo","nome":"Ovo","categoria":"laticínio e ovo","teor":0,"apelidos":["egg","egg white","raw whole egg white","clara de ovo","clara","egg yolk","gema"]},
+  {"id":"creme-de-leite","nome":"Creme de leite fresco","categoria":"laticínio e ovo","teor":0,"apelidos":["cream","fresh cream","heavy cream","creme de leite"]},
+  {"id":"creme-de-coco","nome":"Creme de coco","categoria":"laticínio e ovo","teor":0,"apelidos":["coconut cream","cream of coconut","coco lópez"]},
+
+  {"id":"agua-flor-laranjeira","nome":"Água de flor de laranjeira","categoria":"aromatizante","teor":0,"apelidos":["orange flower water","água de flor de laranja"]},
+  {"id":"extrato-baunilha","nome":"Extrato de baunilha","categoria":"aromatizante","teor":0,"apelidos":["vanilla extract","essência de baunilha"]}
+]

@@ -1,0 +1,891 @@
+[
+ {
+  "id": "negroni",
+  "nome": "Negroni",
+  "iba": "The Unforgettables",
+  "fonte": "https://iba-world.com/iba-cocktail/negroni/",
+  "ingredientes": [
+   {
+    "ing": "gin",
+    "qtd": 30,
+    "unid": "ml"
+   },
+   {
+    "ing": "campari",
+    "qtd": 30,
+    "unid": "ml"
+   },
+   {
+    "ing": "vermute-rosso",
+    "qtd": 30,
+    "unid": "ml"
+   }
+  ],
+  "preparo": "Num copo baixo cheio de gelo, coloque o gin, o Campari e o vermute. Mexa delicadamente por alguns segundos.",
+  "guarnicao": "Meia rodela de laranja.",
+  "copo": "Copo baixo (old fashioned)",
+  "sabor": {
+   "principal": "amargo",
+   "secundario": "herbal"
+  },
+  "complexidade": "fácil",
+  "docura": "equilibrado",
+  "destilado": "gin",
+  "tecnica": [
+   "montado"
+  ],
+  "tempo": 2,
+  "alcool_calc": 23.5,
+  "alcool": "forte"
+ },
+ {
+  "id": "americano",
+  "nome": "Americano",
+  "iba": "The Unforgettables",
+  "fonte": "https://iba-world.com/iba-cocktail/americano/",
+  "ingredientes": [
+   {
+    "ing": "campari",
+    "qtd": 30,
+    "unid": "ml"
+   },
+   {
+    "ing": "vermute-rosso",
+    "qtd": 30,
+    "unid": "ml"
+   },
+   {
+    "ing": "agua-com-gas",
+    "unid": "splash",
+    "completa": true
+   }
+  ],
+  "preparo": "Num copo baixo cheio de gelo, coloque o Campari e o vermute e finalize com um pouco de água com gás. Mexa delicadamente.",
+  "guarnicao": "Meia rodela de laranja e uma casca de limão siciliano.",
+  "copo": "Copo baixo (old fashioned)",
+  "sabor": {
+   "principal": "amargo",
+   "secundario": "frutado"
+  },
+  "complexidade": "fácil",
+  "docura": "seco",
+  "destilado": "outro",
+  "tecnica": [
+   "montado"
+  ],
+  "tempo": 2,
+  "alcool_calc": 13.8,
+  "alcool": "médio"
+ },
+ {
+  "id": "dry-martini",
+  "nome": "Dry Martini",
+  "iba": "The Unforgettables",
+  "fonte": "https://iba-world.com/iba-cocktail/dry-martini/",
+  "ingredientes": [
+   {
+    "ing": "gin",
+    "qtd": 60,
+    "unid": "ml"
+   },
+   {
+    "ing": "vermute-seco",
+    "qtd": 10,
+    "unid": "ml"
+   }
+  ],
+  "preparo": "No mixing glass com bastante gelo, coloque o gin e o vermute seco. Mexa bem, por uns 20 a 30 segundos, até a mistura ficar bem gelada. Coe para uma taça de martini gelada.",
+  "guarnicao": "Torça uma casca de limão siciliano sobre o drink para soltar o óleo. Se preferir, uma azeitona verde.",
+  "copo": "Taça de martini",
+  "sabor": {
+   "principal": "herbal",
+   "secundario": null
+  },
+  "complexidade": "média",
+  "docura": "seco",
+  "destilado": "gin",
+  "tecnica": [
+   "mexido"
+  ],
+  "tempo": 3,
+  "alcool_calc": 28.4,
+  "alcool": "forte"
+ },
+ {
+  "id": "manhattan",
+  "nome": "Manhattan",
+  "iba": "The Unforgettables",
+  "fonte": "https://iba-world.com/iba-cocktail/manhattan/",
+  "ingredientes": [
+   {
+    "ing": "whiskey-rye",
+    "qtd": 50,
+    "unid": "ml"
+   },
+   {
+    "ing": "vermute-rosso",
+    "qtd": 20,
+    "unid": "ml"
+   },
+   {
+    "ing": "angostura",
+    "qtd": 1,
+    "unid": "dash"
+   }
+  ],
+  "preparo": "No mixing glass com gelo, coloque o rye, o vermute e o Angostura. Mexa bem até gelar e coe para uma taça de coquetel gelada.",
+  "guarnicao": "Cereja de coquetel.",
+  "copo": "Taça de coquetel",
+  "sabor": {
+   "principal": "amargo",
+   "secundario": "doce"
+  },
+  "complexidade": "média",
+  "docura": "equilibrado",
+  "destilado": "whisky",
+  "tecnica": [
+   "mexido"
+  ],
+  "tempo": 3,
+  "alcool_calc": 28.3,
+  "alcool": "forte"
+ },
+ {
+  "id": "old-fashioned",
+  "nome": "Old Fashioned",
+  "iba": "The Unforgettables",
+  "fonte": "https://iba-world.com/iba-cocktail/old-fashioned/",
+  "ingredientes": [
+   {
+    "ing": "bourbon",
+    "qtd": 45,
+    "unid": "ml",
+    "alt": [
+     "whiskey-rye"
+    ]
+   },
+   {
+    "ing": "acucar",
+    "qtd": 1,
+    "unid": "cubo"
+   },
+   {
+    "ing": "angostura",
+    "qtd": 3,
+    "unid": "dash"
+   },
+   {
+    "ing": "agua",
+    "qtd": 3,
+    "unid": "dash"
+   }
+  ],
+  "preparo": "No copo baixo, coloque o cubo de açúcar, encharque com o Angostura e pingue um pouco de água. Macere até o açúcar dissolver. Encha o copo de gelo, adicione o whiskey e mexa delicadamente.",
+  "guarnicao": "Rodela ou casca de laranja e uma cereja de coquetel.",
+  "copo": "Copo baixo (old fashioned)",
+  "sabor": {
+   "principal": "amargo",
+   "secundario": "doce"
+  },
+  "complexidade": "fácil",
+  "docura": "equilibrado",
+  "destilado": "whisky",
+  "tecnica": [
+   "macerado",
+   "montado"
+  ],
+  "tempo": 3,
+  "alcool_calc": 32.9,
+  "alcool": "forte"
+ },
+ {
+  "id": "sazerac",
+  "nome": "Sazerac",
+  "iba": "The Unforgettables",
+  "fonte": "https://iba-world.com/iba-cocktail/sazerac/",
+  "ingredientes": [
+   {
+    "ing": "cognac",
+    "qtd": 50,
+    "unid": "ml",
+    "alt": [
+     "whiskey-rye"
+    ]
+   },
+   {
+    "ing": "absinto",
+    "qtd": 10,
+    "unid": "ml",
+    "lavagem": true
+   },
+   {
+    "ing": "acucar",
+    "qtd": 1,
+    "unid": "cubo"
+   },
+   {
+    "ing": "peychauds",
+    "qtd": 2,
+    "unid": "dash"
+   }
+  ],
+  "preparo": "Gele bem um copo baixo. Coloque o absinto, gire o copo para cobrir as paredes por dentro, encha de gelo picado e reserve. No mixing glass, macere o cubo de açúcar com o Peychaud's até dissolver, junte o cognac e gelo e mexa até gelar. Descarte o gelo e o excesso de absinto do copo reservado e coe o drink para dentro dele.",
+  "guarnicao": "Casca de limão siciliano.",
+  "copo": "Copo baixo (old fashioned)",
+  "observacoes": "A receita original trocou o cognac por rye whiskey depois da Guerra Civil americana, quando o cognac ficou difícil de achar. As duas versões valem.",
+  "sabor": {
+   "principal": "herbal",
+   "secundario": "amargo"
+  },
+  "complexidade": "difícil",
+  "docura": "equilibrado",
+  "destilado": "outro",
+  "tecnica": [
+   "mexido"
+  ],
+  "tempo": 4,
+  "alcool_calc": 30.1,
+  "alcool": "forte"
+ },
+ {
+  "id": "daiquiri",
+  "nome": "Daiquiri",
+  "iba": "The Unforgettables",
+  "fonte": "https://iba-world.com/iba-cocktail/daiquiri/",
+  "ingredientes": [
+   {
+    "ing": "rum-branco",
+    "qtd": 60,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao",
+    "qtd": 20,
+    "unid": "ml",
+    "como": "suco"
+   },
+   {
+    "ing": "acucar",
+    "qtd": 2,
+    "unid": "colher de bar"
+   }
+  ],
+  "preparo": "Na coqueteleira, coloque o rum, o suco de limão e o açúcar e mexa até o açúcar dissolver. Adicione gelo, bata bem e coe para uma taça de coquetel gelada.",
+  "guarnicao": null,
+  "copo": "Taça de coquetel",
+  "sabor": {
+   "principal": "cítrico",
+   "secundario": null
+  },
+  "complexidade": "média",
+  "docura": "equilibrado",
+  "destilado": "rum",
+  "tecnica": [
+   "batido"
+  ],
+  "tempo": 3,
+  "alcool_calc": 17.8,
+  "alcool": "médio"
+ },
+ {
+  "id": "margarita",
+  "nome": "Margarita",
+  "iba": "Contemporary Classics",
+  "fonte": "https://iba-world.com/iba-cocktail/margarita/",
+  "ingredientes": [
+   {
+    "ing": "tequila",
+    "qtd": 50,
+    "unid": "ml"
+   },
+   {
+    "ing": "triple-sec",
+    "qtd": 20,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao",
+    "qtd": 15,
+    "unid": "ml",
+    "como": "suco"
+   }
+  ],
+  "preparo": "Na coqueteleira com gelo, coloque a tequila, o triple sec e o suco de limão. Bata bem e coe para uma taça de coquetel gelada.",
+  "guarnicao": "Sal em metade da borda (opcional).",
+  "copo": "Taça de margarita",
+  "sabor": {
+   "principal": "cítrico",
+   "secundario": null
+  },
+  "complexidade": "média",
+  "docura": "equilibrado",
+  "destilado": "tequila",
+  "tecnica": [
+   "batido"
+  ],
+  "tempo": 3,
+  "alcool_calc": 22.0,
+  "alcool": "médio"
+ },
+ {
+  "id": "whiskey-sour",
+  "nome": "Whiskey Sour",
+  "iba": "The Unforgettables",
+  "fonte": "https://iba-world.com/iba-cocktail/whiskey-sour/",
+  "ingredientes": [
+   {
+    "ing": "bourbon",
+    "qtd": 45,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao-siciliano",
+    "qtd": 25,
+    "unid": "ml",
+    "como": "suco"
+   },
+   {
+    "ing": "xarope-simples",
+    "qtd": 20,
+    "unid": "ml"
+   },
+   {
+    "ing": "ovo",
+    "qtd": 15,
+    "unid": "ml",
+    "como": "clara",
+    "opcional": true
+   }
+  ],
+  "preparo": "Na coqueteleira com gelo, coloque o bourbon, o suco de limão siciliano, o xarope e, se for usar, a clara. Bata com vigor e coe para uma taça. Para servir com gelo, coe para um copo baixo cheio de gelo. Com clara, bata antes sem gelo por uns 10 segundos, para formar espuma, e só depois com gelo.",
+  "guarnicao": "Meia rodela de laranja e cereja; ou casca de laranja.",
+  "copo": "Taça (cobbler) ou copo baixo",
+  "sabor": {
+   "principal": "cítrico",
+   "secundario": null
+  },
+  "complexidade": "média",
+  "docura": "equilibrado",
+  "destilado": "whisky",
+  "tecnica": [
+   "batido"
+  ],
+  "tempo": 3,
+  "alcool_calc": 14.3,
+  "alcool": "médio"
+ },
+ {
+  "id": "french-75",
+  "nome": "French 75",
+  "iba": "Contemporary Classics",
+  "fonte": "https://iba-world.com/iba-cocktail/french-75/",
+  "ingredientes": [
+   {
+    "ing": "gin",
+    "qtd": 30,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao-siciliano",
+    "qtd": 15,
+    "unid": "ml",
+    "como": "suco"
+   },
+   {
+    "ing": "xarope-simples",
+    "qtd": 15,
+    "unid": "ml"
+   },
+   {
+    "ing": "espumante",
+    "qtd": 60,
+    "unid": "ml",
+    "completa": true,
+    "nota": "brut; champagne no original"
+   }
+  ],
+  "preparo": "Na coqueteleira com gelo, coloque o gin, o suco de limão siciliano e o xarope. Bata bem e coe para uma taça flute. Complete com o espumante e mexa delicadamente.",
+  "guarnicao": null,
+  "copo": "Taça flute",
+  "sabor": {
+   "principal": "cítrico",
+   "secundario": null
+  },
+  "complexidade": "média",
+  "docura": "equilibrado",
+  "destilado": "gin",
+  "tecnica": [
+   "batido",
+   "montado"
+  ],
+  "tempo": 3,
+  "alcool_calc": 12.8,
+  "alcool": "médio"
+ },
+ {
+  "id": "mojito",
+  "nome": "Mojito",
+  "iba": "Contemporary Classics",
+  "fonte": "https://iba-world.com/iba-cocktail/mojito/",
+  "ingredientes": [
+   {
+    "ing": "rum-branco",
+    "qtd": 45,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao",
+    "qtd": 20,
+    "unid": "ml",
+    "como": "suco"
+   },
+   {
+    "ing": "hortela",
+    "qtd": 6,
+    "unid": "ramos"
+   },
+   {
+    "ing": "acucar",
+    "qtd": 2,
+    "unid": "colher de chá"
+   },
+   {
+    "ing": "agua-com-gas",
+    "unid": "completar",
+    "completa": true
+   }
+  ],
+  "preparo": "No copo alto, coloque a hortelã, o açúcar e o suco de limão e macere de leve, só para soltar o aroma, sem rasgar as folhas. Junte um pouco de água com gás e encha o copo de gelo. Adicione o rum, complete com água com gás e mexa de baixo para cima.",
+  "guarnicao": "Ramo de hortelã e rodela de limão.",
+  "copo": "Copo alto (collins)",
+  "sabor": {
+   "principal": "cítrico",
+   "secundario": "herbal"
+  },
+  "complexidade": "fácil",
+  "docura": "equilibrado",
+  "destilado": "rum",
+  "tecnica": [
+   "macerado",
+   "montado"
+  ],
+  "tempo": 3,
+  "alcool_calc": 10.0,
+  "alcool": "leve"
+ },
+ {
+  "id": "caipirinha",
+  "nome": "Caipirinha",
+  "iba": "Contemporary Classics",
+  "fonte": "https://iba-world.com/iba-cocktail/caipirinha/",
+  "ingredientes": [
+   {
+    "ing": "cachaca",
+    "qtd": 60,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao",
+    "qtd": 1,
+    "unid": "unidade",
+    "como": "em gomos"
+   },
+   {
+    "ing": "acucar",
+    "qtd": 4,
+    "unid": "colher de chá"
+   }
+  ],
+  "preparo": "Corte o limão em gomos pequenos, tirando o miolo branco, e coloque no copo baixo com o açúcar. Macere com delicadeza, só para soltar o suco: espremer demais a casca deixa o drink amargo. Encha o copo de gelo quebrado, adicione a cachaça e mexa para misturar.",
+  "guarnicao": null,
+  "copo": "Copo baixo duplo",
+  "observacoes": "Variações: caipiroska (com vodka), caipiríssima (com rum) e caipirão (com licor Beirão).",
+  "sabor": {
+   "principal": "cítrico",
+   "secundario": null
+  },
+  "complexidade": "fácil",
+  "docura": "equilibrado",
+  "destilado": "cachaça",
+  "tecnica": [
+   "macerado",
+   "montado"
+  ],
+  "tempo": 3,
+  "alcool_calc": 18.2,
+  "alcool": "médio"
+ },
+ {
+  "id": "rabo-de-galo",
+  "nome": "Rabo de Galo",
+  "iba": "Contemporary Classics",
+  "fonte": "https://iba-world.com/iba-cocktail/rabo-de-galo/",
+  "ingredientes": [
+   {
+    "ing": "cachaca",
+    "qtd": 60,
+    "unid": "ml"
+   },
+   {
+    "ing": "vermute-rosso",
+    "qtd": 20,
+    "unid": "ml"
+   },
+   {
+    "ing": "cynar",
+    "qtd": 15,
+    "unid": "ml"
+   },
+   {
+    "ing": "angostura",
+    "qtd": 2,
+    "unid": "gotas",
+    "opcional": true
+   }
+  ],
+  "preparo": "Num copo baixo, coloque a cachaça, o vermute, o Cynar e, se quiser, as gotas de Angostura. Adicione gelo e mexa rapidamente.",
+  "guarnicao": "Casca de laranja torcida.",
+  "copo": "Copo baixo (old fashioned)",
+  "sabor": {
+   "principal": "amargo",
+   "secundario": "herbal"
+  },
+  "complexidade": "fácil",
+  "docura": "equilibrado",
+  "destilado": "cachaça",
+  "tecnica": [
+   "montado"
+  ],
+  "tempo": 2,
+  "alcool_calc": 27.2,
+  "alcool": "forte"
+ },
+ {
+  "id": "cuba-libre",
+  "nome": "Cuba Libre",
+  "iba": "Contemporary Classics",
+  "fonte": "https://iba-world.com/iba-cocktail/cuba-libre/",
+  "ingredientes": [
+   {
+    "ing": "rum-branco",
+    "qtd": 50,
+    "unid": "ml"
+   },
+   {
+    "ing": "refrigerante-cola",
+    "qtd": 120,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao",
+    "qtd": 10,
+    "unid": "ml",
+    "como": "suco"
+   }
+  ],
+  "preparo": "Num copo alto cheio de gelo, coloque o rum e o suco de limão e complete com o refrigerante de cola. Mexa de leve.",
+  "guarnicao": "Gomo de limão.",
+  "copo": "Copo alto (highball)",
+  "sabor": {
+   "principal": "doce",
+   "secundario": "cítrico"
+  },
+  "complexidade": "fácil",
+  "docura": "doce",
+  "destilado": "rum",
+  "tecnica": [
+   "montado"
+  ],
+  "tempo": 2,
+  "alcool_calc": 9.7,
+  "alcool": "leve"
+ },
+ {
+  "id": "moscow-mule",
+  "nome": "Moscow Mule",
+  "iba": "Contemporary Classics",
+  "fonte": "https://iba-world.com/iba-cocktail/moscow-mule/",
+  "ingredientes": [
+   {
+    "ing": "vodka",
+    "qtd": 45,
+    "unid": "ml"
+   },
+   {
+    "ing": "ginger-beer",
+    "qtd": 120,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao",
+    "qtd": 10,
+    "unid": "ml",
+    "como": "suco"
+   }
+  ],
+  "preparo": "Na caneca de cobre (ou num copo baixo) com gelo, coloque a vodka e a ginger beer. Adicione o suco de limão e mexa delicadamente.",
+  "guarnicao": "Rodela de limão.",
+  "copo": "Caneca de cobre ou copo baixo",
+  "sabor": {
+   "principal": "cítrico",
+   "secundario": null
+  },
+  "complexidade": "fácil",
+  "docura": "equilibrado",
+  "destilado": "vodka",
+  "tecnica": [
+   "montado"
+  ],
+  "tempo": 2,
+  "alcool_calc": 8.9,
+  "alcool": "leve"
+ },
+ {
+  "id": "spritz",
+  "nome": "Spritz",
+  "iba": "New Era Drinks",
+  "fonte": "https://iba-world.com/iba-cocktail/spritz/",
+  "ingredientes": [
+   {
+    "ing": "espumante",
+    "qtd": 90,
+    "unid": "ml",
+    "nota": "prosecco no original"
+   },
+   {
+    "ing": "aperol",
+    "qtd": 60,
+    "unid": "ml"
+   },
+   {
+    "ing": "agua-com-gas",
+    "unid": "splash",
+    "completa": true
+   }
+  ],
+  "preparo": "Numa taça de vinho cheia de gelo, coloque o espumante e o Aperol e finalize com um pouco de água com gás. Mexa delicadamente.",
+  "guarnicao": "Rodela de laranja.",
+  "copo": "Taça de vinho",
+  "observacoes": "Há versões com Campari, Cynar ou Select no lugar do Aperol.",
+  "sabor": {
+   "principal": "amargo",
+   "secundario": "frutado"
+  },
+  "complexidade": "fácil",
+  "docura": "equilibrado",
+  "destilado": "outro",
+  "tecnica": [
+   "montado"
+  ],
+  "tempo": 2,
+  "alcool_calc": 9.0,
+  "alcool": "leve"
+ },
+ {
+  "id": "espresso-martini",
+  "nome": "Espresso Martini",
+  "iba": "New Era Drinks",
+  "fonte": "https://iba-world.com/iba-cocktail/espresso-martini/",
+  "ingredientes": [
+   {
+    "ing": "vodka",
+    "qtd": 50,
+    "unid": "ml"
+   },
+   {
+    "ing": "licor-cafe",
+    "qtd": 30,
+    "unid": "ml"
+   },
+   {
+    "ing": "xarope-simples",
+    "qtd": 10,
+    "unid": "ml"
+   },
+   {
+    "ing": "cafe",
+    "qtd": 30,
+    "unid": "ml",
+    "como": "espresso forte"
+   }
+  ],
+  "preparo": "Tire um espresso forte e deixe esfriar um pouco. Na coqueteleira com gelo, coloque a vodka, o licor de café, o xarope e o café. Bata com bastante vigor, para formar espuma, e coe para uma taça de coquetel gelada.",
+  "guarnicao": "Três grãos de café.",
+  "copo": "Taça de coquetel",
+  "sabor": {
+   "principal": "amargo",
+   "secundario": "doce"
+  },
+  "complexidade": "média",
+  "docura": "doce",
+  "destilado": "vodka",
+  "tecnica": [
+   "batido"
+  ],
+  "tempo": 4,
+  "alcool_calc": 14.4,
+  "alcool": "médio"
+ },
+ {
+  "id": "pina-colada",
+  "nome": "Piña Colada",
+  "iba": "Contemporary Classics",
+  "fonte": "https://iba-world.com/iba-cocktail/pina-colada/",
+  "ingredientes": [
+   {
+    "ing": "rum-branco",
+    "qtd": 50,
+    "unid": "ml"
+   },
+   {
+    "ing": "creme-de-coco",
+    "qtd": 30,
+    "unid": "ml"
+   },
+   {
+    "ing": "abacaxi",
+    "qtd": 50,
+    "unid": "ml",
+    "como": "suco"
+   }
+  ],
+  "preparo": "No liquidificador, coloque o rum, o creme de coco, o suco de abacaxi e gelo. Bata até ficar homogêneo e sirva num copo grande, com canudo.",
+  "guarnicao": "Fatia de abacaxi e cereja de coquetel.",
+  "copo": "Copo grande (poco grande)",
+  "observacoes": "Dá para trocar o suco por 4 fatias de abacaxi fresco. Tradicionalmente levava algumas gotas de suco de limão.",
+  "liquidificador": true,
+  "sabor": {
+   "principal": "cremoso",
+   "secundario": "frutado"
+  },
+  "complexidade": "média",
+  "docura": "doce",
+  "destilado": "rum",
+  "tecnica": [
+   "batido"
+  ],
+  "tempo": 3,
+  "alcool_calc": 9.6,
+  "alcool": "leve"
+ },
+ {
+  "id": "pisco-sour",
+  "nome": "Pisco Sour",
+  "iba": "Contemporary Classics",
+  "fonte": "https://iba-world.com/iba-cocktail/pisco-sour/",
+  "ingredientes": [
+   {
+    "ing": "pisco",
+    "qtd": 60,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao-siciliano",
+    "qtd": 30,
+    "unid": "ml",
+    "como": "suco"
+   },
+   {
+    "ing": "xarope-simples",
+    "qtd": 20,
+    "unid": "ml"
+   },
+   {
+    "ing": "ovo",
+    "qtd": 1,
+    "unid": "unidade",
+    "como": "clara"
+   }
+  ],
+  "preparo": "Na coqueteleira, coloque o pisco, o suco de limão, o xarope e a clara. Bata sem gelo por uns 10 segundos, para formar espuma, junte gelo e bata de novo com vigor. Coe para uma taça gelada e pingue algumas gotas de bitter sobre a espuma.",
+  "guarnicao": "Algumas gotas de bitter Amargo Chuncho (ou Angostura) sobre a espuma.",
+  "copo": "Taça",
+  "sabor": {
+   "principal": "cítrico",
+   "secundario": "cremoso"
+  },
+  "complexidade": "difícil",
+  "docura": "equilibrado",
+  "destilado": "outro",
+  "tecnica": [
+   "batido"
+  ],
+  "tempo": 4,
+  "alcool_calc": 11.4,
+  "alcool": "médio"
+ },
+ {
+  "id": "ramos-fizz",
+  "nome": "Ramos Gin Fizz",
+  "iba": "The Unforgettables",
+  "fonte": "https://iba-world.com/iba-cocktail/ramos-fizz/",
+  "ingredientes": [
+   {
+    "ing": "gin",
+    "qtd": 45,
+    "unid": "ml"
+   },
+   {
+    "ing": "limao",
+    "qtd": 15,
+    "unid": "ml",
+    "como": "suco"
+   },
+   {
+    "ing": "limao-siciliano",
+    "qtd": 15,
+    "unid": "ml",
+    "como": "suco"
+   },
+   {
+    "ing": "xarope-simples",
+    "qtd": 30,
+    "unid": "ml"
+   },
+   {
+    "ing": "creme-de-leite",
+    "qtd": 60,
+    "unid": "ml"
+   },
+   {
+    "ing": "ovo",
+    "qtd": 30,
+    "unid": "ml",
+    "como": "clara"
+   },
+   {
+    "ing": "agua-flor-laranjeira",
+    "qtd": 3,
+    "unid": "dash"
+   },
+   {
+    "ing": "extrato-baunilha",
+    "qtd": 2,
+    "unid": "gotas"
+   },
+   {
+    "ing": "agua-com-gas",
+    "unid": "completar",
+    "completa": true
+   }
+  ],
+  "preparo": "Na coqueteleira, coloque todos os ingredientes, menos a água com gás. Bata sem gelo por um minuto, para emulsionar a clara e o creme. Junte gelo e bata com força por mais dois minutos. Coe com peneira fina para um copo alto sem gelo, espere a espuma assentar um pouco e complete devagar com a água com gás, para a espuma subir acima da borda.",
+  "guarnicao": null,
+  "copo": "Copo alto (collins), sem gelo",
+  "observacoes": "Criado por Henry Ramos em 1888, em Nova Orleans. Contam que era batido por 12 minutos, com a coqueteleira passando de mão em mão entre os bartenders.",
+  "sabor": {
+   "principal": "cremoso",
+   "secundario": "cítrico"
+  },
+  "complexidade": "difícil",
+  "docura": "equilibrado",
+  "destilado": "gin",
+  "tecnica": [
+   "batido",
+   "montado"
+  ],
+  "tempo": 6,
+  "alcool_calc": 4.7,
+  "alcool": "leve"
+ }
+]
