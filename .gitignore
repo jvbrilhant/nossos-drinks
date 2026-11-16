@@ -1,0 +1,9 @@
+# Sistema
+.DS_Store
+
+# Material interno (não publicar: o repositório é público)
+HANDOFF.md
+claude/
+mnt/
+referencias/
+gerar-modelos-stories.py
