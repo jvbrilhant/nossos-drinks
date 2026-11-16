@@ -7,3 +7,4 @@ claude/
 mnt/
 referencias/
 gerar-modelos-stories.py
+.claude/
