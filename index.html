@@ -9,7 +9,7 @@
 <title>Nossos Drinks</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=Courier+Prime:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,500&family=Raleway:wght@800;900&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.min.js"></script>
 <script>
@@ -116,7 +116,8 @@ const SUPABASE_KEY  = "sb_publishable_1YJBPI3pgNYnbbeWxfjUkw_R9HWmyQq";
   }
   .card:active{transform:translateY(1px);}
   .thumb{width:58px;height:58px;border-radius:14px;object-fit:cover;flex-shrink:0;background:var(--peach);}
-  .thumb.ph{display:flex;align-items:center;justify-content:center;font-size:26px;}
+  .thumb.ph{display:flex;align-items:center;justify-content:center;background:#FAF8FE;border:1px solid #E6E1F2;
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:24px;color:var(--ink-soft);}
   .card-body{flex:1;min-width:0;}
   .card-drink{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;}
   .card-by{font-size:12.5px;color:var(--ink-faint);margin-top:1px;}
@@ -152,7 +153,20 @@ const SUPABASE_KEY  = "sb_publishable_1YJBPI3pgNYnbbeWxfjUkw_R9HWmyQq";
   }
   .field input:focus,.field textarea:focus{border-color:var(--violet);outline:none;background:#fff;}
   .field textarea{min-height:76px;resize:vertical;}
-  .field input[type=file]{font-size:13px;color:var(--ink-soft);}
+  /* quadro de foto: o input fica escondido dentro do label, que é o alvo de toque */
+  .field .photo-drop{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+    width:100%;height:200px;margin:0;border:2px dashed rgba(42,33,64,0.22);border-radius:16px;background:#FAF8FE;
+    color:var(--ink-soft);font-size:14px;font-weight:500;cursor:pointer;overflow:hidden;
+    transition:border-color .16s ease-out, background .16s ease-out;}
+  .photo-drop:active,.photo-drop:focus-within{border-color:var(--violet);background:#fff;}
+  .photo-drop input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+  .photo-drop svg{width:32px;height:32px;stroke:currentColor;}
+  .photo-drop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;}
+  .photo-drop .swap{position:absolute;right:8px;bottom:8px;background:rgba(42,33,64,0.78);color:#fff;
+    font-size:12px;font-weight:700;padding:6px 10px;border-radius:8px;pointer-events:none;}
+  .photo-drop.has .ph-empty{display:none;}
+  .photo-drop:not(.has) img,.photo-drop:not(.has) .swap{display:none;}
+  .ph-empty{display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none;}
   .field .hint{font-size:12px;color:var(--ink-faint);margin-top:5px;}
 
   .suggests{display:flex;flex-direction:column;gap:6px;margin-top:8px;}
@@ -232,7 +246,21 @@ const SUPABASE_KEY  = "sb_publishable_1YJBPI3pgNYnbbeWxfjUkw_R9HWmyQq";
     padding:12px;font-size:14.5px;font-family:'DM Sans',sans-serif;color:var(--ink);}
   .cm-add input:focus{border-color:var(--violet);background:#fff;outline:none;}
   .pill.soc{background:var(--lilac);color:var(--ink-soft);}
-  .saved-mark{font-size:46px;margin-bottom:8px;}
+  .saved-art{width:180px;height:auto;display:block;margin:0 auto 12px;
+    filter:drop-shadow(0 12px 18px rgba(42,33,64,0.16));}
+
+  /* escolha do modelo de Stories */
+  #ov-story{z-index:55;}
+  .models{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .model{background:none;border:none;padding:0;cursor:pointer;text-align:left;font-family:'DM Sans',sans-serif;color:var(--ink);}
+  .model .frame{aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#FAF8FE;border:1px solid #E6E1F2;
+    display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:13px;
+    transition:transform .16s ease-out;}
+  .model:active .frame{transform:scale(0.97);}
+  .model .frame img{width:100%;height:100%;object-fit:cover;display:block;}
+  .model .nm{display:block;font-size:14px;font-weight:700;margin-top:8px;}
+  .model .nm small{font-weight:500;color:var(--ink-soft);font-size:12px;margin-left:4px;}
+  .models-hint{font-size:13.5px;color:var(--ink-soft);margin:-4px 0 16px;}
   .setup-warn{display:none;background:#FFE0E6;color:#9B1B3C;border-radius:16px;
     padding:14px 16px;font-size:13.5px;line-height:1.5;margin-bottom:18px;}
   .fab{position:fixed;right:20px;bottom:22px;width:58px;height:58px;border-radius:50%;
@@ -331,7 +359,11 @@ const SUPABASE_KEY  = "sb_publishable_1YJBPI3pgNYnbbeWxfjUkw_R9HWmyQq";
       </div>
       <div class="field">
         <label for="f-vphoto">Foto do lugar</label>
-        <input type="file" accept="image/*" id="f-vphoto">
+        <label class="photo-drop" id="pd-vphoto">
+          <input type="file" accept="image/*" id="f-vphoto" onchange="previewPhoto(this)">
+          <span class="ph-empty"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Toque para adicionar uma foto</span>
+          <img alt=""><span class="swap">Trocar foto</span>
+        </label>
       </div>
     </div>
 
@@ -347,8 +379,11 @@ const SUPABASE_KEY  = "sb_publishable_1YJBPI3pgNYnbbeWxfjUkw_R9HWmyQq";
       </div>
       <div class="field">
         <label for="f-dphoto">Foto do drink</label>
-        <input type="file" accept="image/*" id="f-dphoto">
-        <div class="hint">Vale a pena — é ela que aparece na lista.</div>
+        <label class="photo-drop" id="pd-dphoto">
+          <input type="file" accept="image/*" id="f-dphoto" onchange="previewPhoto(this)">
+          <span class="ph-empty"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Toque para adicionar uma foto</span>
+          <img alt=""><span class="swap">Trocar foto</span>
+        </label>
       </div>
     </div>
 
@@ -383,14 +418,23 @@ const SUPABASE_KEY  = "sb_publishable_1YJBPI3pgNYnbbeWxfjUkw_R9HWmyQq";
 <!-- SAVED -->
 <div class="overlay" id="ov-saved">
   <div class="sheet" style="text-align:center;">
-    <div class="saved-mark">🥂</div>
+    <img class="saved-art" id="saved-art" alt="">
     <h2 style="margin-bottom:6px;">Anotado</h2>
     <p id="saved-line" style="color:var(--ink-soft);font-size:14.5px;margin:0 0 20px;"></p>
     <div style="display:flex;flex-direction:column;gap:10px;">
       <button class="btn btn-turq btn-block" id="saved-share">Mandar pros amigos no WhatsApp</button>
-      <button class="btn btn-story btn-block" id="saved-story">Imagem pro Instagram</button>
+      <button class="btn btn-story btn-block" id="saved-story">Postar no Instagram</button>
       <button class="btn btn-soft btn-block" onclick="closeSaved()">Agora não</button>
     </div>
+  </div>
+</div>
+
+<!-- STORIES: escolha do modelo -->
+<div class="overlay" id="ov-story">
+  <div class="sheet">
+    <div class="sheet-head"><h2>Escolha o modelo</h2><button class="x" onclick="closeStoryPicker()" aria-label="Fechar">✕</button></div>
+    <p class="models-hint">Toque num modelo para compartilhar a imagem.</p>
+    <div class="models" id="models"></div>
   </div>
 </div>
 
@@ -527,7 +571,7 @@ function renderFeed(){
       (link?'<a href="'+esc(link)+'" target="_blank" rel="noopener">abrir</a>':'')+'</div>';
     list.forEach(e=>{
       const c=document.createElement('div'); c.className='card'; c.onclick=()=>openDetail(e.id);
-      c.innerHTML=(e.drinkPhoto?'<img class="thumb" src="'+e.drinkPhoto+'" alt="">':'<div class="thumb ph">🍹</div>')+
+      c.innerHTML=(e.drinkPhoto?'<img class="thumb" src="'+e.drinkPhoto+'" alt="">':'<div class="thumb ph" aria-hidden="true">'+esc(initialOf(e.drinkName))+'</div>')+
         '<div class="card-body"><div class="card-drink">'+esc(e.drinkName)+'</div>'+
         '<div class="card-by">por <b>'+esc(e.author)+'</b></div>'+
         '<div class="pills"><span class="pill drink">drink '+(e.ratings.drinkGeral||0)+'</span>'+
@@ -587,6 +631,7 @@ function pickVenue(i){
 function openWizard(){
   editingId=null;
   ['f-venue','f-link','f-vphoto','f-drink','f-dphoto','f-notes'].forEach(id=>document.getElementById(id).value='');
+  setPhotoPreview('f-vphoto',null); setPhotoPreview('f-dphoto',null);
   ratings={}; CATS.forEach(c=>ratings[c]=0);
   chosenAddress='';
   document.getElementById('venue-suggests').innerHTML='';
@@ -595,6 +640,26 @@ function openWizard(){
   document.getElementById('ov-wizard').classList.add('active');
 }
 function closeWizard(){document.getElementById('ov-wizard').classList.remove('active');}
+
+/* quadro de foto: mostra a imagem escolhida (ou a já salva, na edição) */
+function setPhotoPreview(inputId,src){
+  const box=document.getElementById(inputId).closest('.photo-drop');
+  const img=box.querySelector('img');
+  if(img.dataset.url){URL.revokeObjectURL(img.dataset.url);delete img.dataset.url;}
+  if(src){img.src=src;box.classList.add('has');}
+  else{img.removeAttribute('src');box.classList.remove('has');}
+}
+function previewPhoto(input){
+  const f=input.files&&input.files[0];
+  if(!f){setPhotoPreview(input.id,null);return;}
+  const url=URL.createObjectURL(f);
+  setPhotoPreview(input.id,url);
+  input.closest('.photo-drop').querySelector('img').dataset.url=url;
+}
+function initialOf(name){
+  const s=String(name||'').trim();
+  return s?s.charAt(0).toUpperCase():'?';
+}
 function toStep(n){
   step=n;
   [1,2,3].forEach(i=>document.getElementById('st-'+i).classList.toggle('active',i===n));
@@ -674,8 +739,10 @@ function showSaved(id){
   document.getElementById('wz-title').textContent='Salvo!';
   document.getElementById('ov-wizard').classList.remove('active');
   document.getElementById('saved-line').textContent=e.drinkName+' no '+e.venueName+' entrou na lista.';
+  const art=document.getElementById('saved-art'), hero=document.querySelector('.hero-art');
+  if(hero&&!art.src) art.src=hero.src;
   document.getElementById('saved-share').onclick=()=>shareEntry(id);
-  document.getElementById('saved-story').onclick=()=>makeStory(id);
+  document.getElementById('saved-story').onclick=()=>openStoryPicker(id);
   document.getElementById('ov-saved').classList.add('active');
 }
 function closeSaved(){
@@ -706,7 +773,7 @@ function openDetail(id){
     reactionBar(e)+
     commentBlock(e)+
     '<div class="sheet-actions"><button class="btn btn-turq btn-block" onclick="shareEntry(\''+e.id+'\')">Mandar no WhatsApp</button></div>'+
-    '<div class="sheet-actions"><button class="btn btn-story btn-block" onclick="makeStory(\''+e.id+'\')">Imagem pro Instagram</button></div>'+
+    '<div class="sheet-actions"><button class="btn btn-story btn-block" onclick="openStoryPicker(\''+e.id+'\')">Postar no Instagram</button></div>'+
     (e.author===user?'<div class="sheet-actions"><button class="btn btn-soft btn-block" onclick="editEntry(\''+e.id+'\')">Editar</button></div>':'');
   document.getElementById('ov-detail').classList.add('active');
 }
@@ -718,6 +785,8 @@ function editEntry(id){
   document.getElementById('f-link').value=e.venueLink||'';
   document.getElementById('f-drink').value=e.drinkName;
   document.getElementById('f-notes').value=e.notes||'';
+  document.getElementById('f-vphoto').value=''; document.getElementById('f-dphoto').value='';
+  setPhotoPreview('f-vphoto',e.venuePhoto||null); setPhotoPreview('f-dphoto',e.drinkPhoto||null);
   ratings={...e.ratings}; CATS.forEach(c=>{if(!(c in ratings))ratings[c]=0;});
   renderStars(); toStep(1);
   document.getElementById('ov-wizard').classList.add('active');
@@ -812,97 +881,323 @@ function roundRect(ctx,x,y,w,h,r){
   ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);
   ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();
 }
-function starStr(n){
-  n=Math.max(0,Math.min(5,n||0));
-  return '\u2605'.repeat(n)+'\u2606'.repeat(5-n);
+/* ---------- Stories: quatro modelos desenhados em canvas ----------
+   Fluxo: Postar no Instagram -> escolher modelo -> compartilhar.
+   As quatro imagens são geradas assim que a folha abre; o toque no modelo
+   chama navigator.share() sem nenhum await antes, para não perder o gesto. */
+const STORY_W=1080, STORY_H=1920;
+const STORY_MODELS=[
+  {id:'comanda',     nome:'Comanda',     padrao:true, draw:drawComanda},
+  {id:'elegante',    nome:'Elegante',    draw:drawElegante},
+  {id:'animado',     nome:'Animado',     draw:drawAnimado},
+  {id:'tipografico', nome:'Tipográfico', draw:drawTipografico}
+];
+
+function storyRows(e){
+  const r=e.ratings||{};
+  return [['Aparência',r.aparencia||0],['Aroma',r.aroma||0],['Sabor',r.sabor||0],['Equilíbrio',r.equilibrio||0]];
+}
+function storyTotal(e){return (e.ratings&&e.ratings.drinkGeral)||0;}
+function slug(s){return String(s||'drink').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-zA-Z0-9]+/g,'-').replace(/^-|-$/g,'').toLowerCase()||'drink';}
+
+/* texto centrado verticalmente pela altura da maiúscula, para alinhar com as estrelas */
+function textMid(ctx,txt,x,cy){
+  ctx.textBaseline='alphabetic';
+  const cap=ctx.measureText('H').actualBoundingBoxAscent;
+  ctx.fillText(txt,x,cy+cap/2);
+}
+/* reduz a fonte até caber; se nem no mínimo couber, corta com reticências */
+function fitText(ctx,text,fontFn,max,min,maxW){
+  let s=max; ctx.font=fontFn(s);
+  while(s>min&&ctx.measureText(text).width>maxW){s-=2;ctx.font=fontFn(s);}
+  let t=String(text);
+  if(ctx.measureText(t).width>maxW){
+    while(t.length>1&&ctx.measureText(t+'…').width>maxW) t=t.slice(0,-1);
+    t+='…';
+  }
+  return t;
+}
+function withSpacing(ctx,px,fn){
+  const has='letterSpacing' in ctx, old=has?ctx.letterSpacing:null;
+  if(has) ctx.letterSpacing=px+'px';
+  fn();
+  if(has) ctx.letterSpacing=old;
 }
 
-async function makeStory(id){
-  const e=entries.find(x=>x.id===id); if(!e) return;
-  showToast('Gerando imagem...');
-  const W=1080,H=1920;
-  const cv=document.createElement('canvas');cv.width=W;cv.height=H;
-  const ctx=cv.getContext('2d');
+/* estrela desenhada (não glifo): cheia em cor, vazia = cheia com opacidade baixa */
+function starPath(ctx,cx,cy,r){
+  ctx.beginPath();
+  for(let i=0;i<10;i++){
+    const rad=i%2?r*0.48:r, a=-Math.PI/2+i*Math.PI/5;
+    ctx.lineTo(cx+rad*Math.cos(a),cy+rad*Math.sin(a));
+  }
+  ctx.closePath();
+}
+function starsWidth(size,gap){return 5*size+4*gap;}
+/* cinco estrelas alinhadas à direita em xRight, centro óptico em cy */
+function drawStars(ctx,xRight,cy,n,size,gap,on,off){
+  const r=size/2;
+  for(let i=0;i<5;i++){
+    const cx=xRight-r-(4-i)*(size+gap);
+    starPath(ctx,cx,cy+r*0.095,r);
+    ctx.fillStyle=i<n?on:off; ctx.fill();
+  }
+}
 
-  const g=ctx.createLinearGradient(0,0,W,H);
-  g.addColorStop(0,'#F1ECFB');g.addColorStop(0.55,'#FFE9D9');g.addColorStop(1,'#DFF5EC');
-  ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
-
-  ctx.fillStyle='rgba(255,158,31,0.22)';ctx.beginPath();ctx.arc(920,220,190,0,7);ctx.fill();
-  ctx.fillStyle='rgba(255,77,109,0.16)';ctx.beginPath();ctx.arc(140,1700,240,0,7);ctx.fill();
-
-  ctx.fillStyle='#2A2140';
-  ctx.font='700 42px "DM Sans", sans-serif';
-  ctx.fillText('NOSSOS DRINKS', 90, 170);
-
-  const PX=90, PW=W-180, PY=250, PH=1180;
+function drawCover(ctx,img,x,y,w,h){
+  const sc=Math.max(w/img.width,h/img.height),dw=img.width*sc,dh=img.height*sc;
+  ctx.drawImage(img,x+(w-dw)/2,y+(h-dh)/2,dw,dh);
+}
+/* foto do drink sempre colorida; sem foto, bloco liso com a inicial */
+function drawPhoto(ctx,img,e,x,y,w,h,opt){
   ctx.save();
-  ctx.shadowColor='rgba(42,33,64,0.18)';ctx.shadowBlur=50;ctx.shadowOffsetY=18;
-  ctx.fillStyle='#FFFFFF';roundRect(ctx,PX,PY,PW,PH,52);ctx.fill();
-  ctx.restore();
-
-  const IMX=PX+46,IMY=PY+46,IMW=PW-92,IMH=680;
-  ctx.save();roundRect(ctx,IMX,IMY,IMW,IMH,38);ctx.clip();
-  if(e.drinkPhoto){
-    try{
-      const img=await loadImg(e.drinkPhoto);
-      const sc=Math.max(IMW/img.width,IMH/img.height);
-      const dw=img.width*sc,dh=img.height*sc;
-      ctx.drawImage(img,IMX+(IMW-dw)/2,IMY+(IMH-dh)/2,dw,dh);
-    }catch(err){ ctx.fillStyle='#FFE9D9';ctx.fillRect(IMX,IMY,IMW,IMH); }
-  } else {
-    ctx.fillStyle='#FFE9D9';ctx.fillRect(IMX,IMY,IMW,IMH);
-    ctx.fillStyle='#FF9E1F';ctx.font='200px serif';ctx.textAlign='center';
-    ctx.fillText('\uD83C\uDF79',IMX+IMW/2,IMY+IMH/2+70);ctx.textAlign='left';
+  if(opt.radius){roundRect(ctx,x,y,w,h,opt.radius);} else {ctx.beginPath();ctx.rect(x,y,w,h);}
+  ctx.clip();
+  if(img) drawCover(ctx,img,x,y,w,h);
+  else{
+    ctx.fillStyle=opt.bg;ctx.fillRect(x,y,w,h);
+    ctx.fillStyle=opt.fg;ctx.font=opt.font;ctx.textAlign='center';
+    textMid(ctx,initialOf(e.drinkName),x+w/2,y+h/2);
+    ctx.textAlign='left';
   }
   ctx.restore();
+}
 
-  let y=IMY+IMH+96;
-  ctx.fillStyle='#2A2140';ctx.font='800 76px "DM Sans", sans-serif';
-  let name=e.drinkName; while(ctx.measureText(name).width>PW-92&&name.length>4){name=name.slice(0,-2);}
-  if(name!==e.drinkName)name+='…';
-  ctx.fillText(name,PX+46,y);
-  y+=58;
-  ctx.fillStyle='#6D6485';ctx.font='500 40px "DM Sans", sans-serif';
-  ctx.fillText(e.venueName,PX+46,y);
+/* 1. Comanda (padrão): papel, fonte mono, foto colorida, total em vermelho */
+function drawComanda(ctx,e,img){
+  const W=STORY_W,H=STORY_H;
+  ctx.fillStyle='#D8C9B4';ctx.fillRect(0,0,W,H);
+  const MONO=s=>'400 '+s+'px "Courier Prime", monospace';
+  const MONOB=s=>'700 '+s+'px "Courier Prime", monospace';
+  const INK='#2B2420', RED='#A3263A', OFF='rgba(43,36,32,0.2)';
+  const PW=840, pad=56, IW=PW-2*pad, IH=620, itemH=100, rowH=84, totH=124;
+  const PH=pad+IH+40+itemH+24+4*rowH+24+totH+pad;
+  const PX=(W-PW)/2, PY=Math.round((H-PH)/2)-10;
+  const L=PX+pad, R=PX+PW-pad;
 
-  y+=76;
-  ctx.strokeStyle='rgba(42,33,64,0.10)';ctx.lineWidth=3;
-  ctx.beginPath();ctx.moveTo(PX+46,y);ctx.lineTo(PX+PW-46,y);ctx.stroke();
+  ctx.save();
+  ctx.translate(W/2,H/2);ctx.rotate(-0.018);ctx.translate(-W/2,-H/2);
+  ctx.save();
+  ctx.shadowColor='rgba(60,40,20,0.24)';ctx.shadowBlur=44;ctx.shadowOffsetY=18;
+  ctx.fillStyle='#F4ECDD';
+  ctx.beginPath();ctx.moveTo(PX,PY);ctx.lineTo(PX+PW,PY);ctx.lineTo(PX+PW,PY+PH);
+  const teeth=30, tw=PW/teeth;
+  for(let i=teeth;i>0;i--){ctx.lineTo(PX+(i-0.5)*tw,PY+PH+16);ctx.lineTo(PX+(i-1)*tw,PY+PH);}
+  ctx.closePath();ctx.fill();
+  ctx.restore();
 
-  y+=68;
-  const rows=[['Aparência',e.ratings.aparencia],['Aroma',e.ratings.aroma],
-              ['Sabor',e.ratings.sabor],['Equilíbrio',e.ratings.equilibrio]];
-  rows.forEach(r=>{
-    ctx.fillStyle='#6D6485';ctx.font='500 38px "DM Sans", sans-serif';
-    ctx.fillText(r[0],PX+46,y);
-    ctx.fillStyle='#FF9E1F';ctx.font='40px serif';ctx.textAlign='right';
-    ctx.fillText(starStr(r[1]),PX+PW-46,y);ctx.textAlign='left';
-    y+=64;
+  drawPhoto(ctx,img,e,L,PY+pad,IW,IH,{bg:'#E9DFCC',fg:'#8A7A63',font:MONOB(260)});
+
+  const dash=yy=>{ctx.save();ctx.strokeStyle='rgba(43,36,32,0.6)';ctx.lineWidth=3;ctx.setLineDash([14,10]);
+    ctx.beginPath();ctx.moveTo(L,yy);ctx.lineTo(R,yy);ctx.stroke();ctx.restore();};
+  let y=PY+pad+IH+40;
+  dash(y);
+  ctx.fillStyle=INK;ctx.font=MONOB(44);ctx.textAlign='left';
+  const itemW=ctx.measureText('ITEM:').width;
+  textMid(ctx,'ITEM:',L,y+itemH/2);
+  const nm=fitText(ctx,e.drinkName,MONO,58,30,R-L-itemW-32);
+  ctx.textAlign='right';textMid(ctx,nm,R,y+itemH/2);ctx.textAlign='left';
+  y+=itemH; dash(y); y+=24;
+  storyRows(e).forEach(([lb,n])=>{
+    ctx.fillStyle=INK;ctx.font=MONO(46);textMid(ctx,lb,L,y+rowH/2);
+    drawStars(ctx,R,y+rowH/2,n,52,14,RED,OFF);
+    y+=rowH;
   });
+  y+=24; dash(y);
+  ctx.fillStyle=INK;ctx.font=MONOB(54);textMid(ctx,'TOTAL:',L,y+totH/2+6);
+  ctx.fillStyle=RED;ctx.font=MONOB(92);ctx.textAlign='right';
+  textMid(ctx,storyTotal(e)+' / 5',R,y+totH/2+6);ctx.textAlign='left';
+  ctx.restore();
+}
 
-  y+=16;
-  const BX=PX+46,BW=PW-92,BH=132;
-  ctx.fillStyle='#FF4D6D';roundRect(ctx,BX,y,BW,BH,32);ctx.fill();
-  ctx.fillStyle='#FFFFFF';ctx.font='700 38px "DM Sans", sans-serif';
-  ctx.fillText('Nota do drink',BX+40,y+80);
-  ctx.font='800 66px "DM Sans", sans-serif';ctx.textAlign='right';
-  ctx.fillText((e.ratings.drinkGeral||0)+'/5',BX+BW-40,y+88);ctx.textAlign='left';
+/* 2. Elegante: ameixa escuro, foto em card, nome em serifa itálica, estrelas coral */
+function drawElegante(ctx,e,img){
+  const W=STORY_W,H=STORY_H;
+  const bg=ctx.createLinearGradient(0,0,0,H);
+  bg.addColorStop(0,'#2A1433');bg.addColorStop(0.35,'#1A0C1F');bg.addColorStop(1,'#140A18');
+  ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  const glow=ctx.createRadialGradient(W/2,0,0,W/2,0,640);
+  glow.addColorStop(0,'rgba(140,80,190,0.45)');glow.addColorStop(1,'rgba(140,80,190,0)');
+  ctx.fillStyle=glow;ctx.fillRect(0,0,W,H);
+  const CREAM='#F3E6D8', CORAL='#F0596A', OFF='rgba(243,230,216,0.16)';
+  const SERIF_I=s=>'italic 500 '+s+'px "Playfair Display", serif';
+  const SERIF=s=>'400 '+s+'px "Playfair Display", serif';
+  const X=90, IW=W-180, IH=800, nameH=140, bigH=100, rowH=88;
+  const total=IH+64+nameH+24+bigH+56+4*rowH;
+  let y=Math.round((H-total)/2);
 
-  ctx.fillStyle='#6D6485';ctx.font='500 36px "DM Sans", sans-serif';ctx.textAlign='center';
-  ctx.fillText('por '+e.author,W/2,PY+PH+92);
+  ctx.save();ctx.shadowColor='rgba(0,0,0,0.5)';ctx.shadowBlur=50;ctx.shadowOffsetY=20;
+  ctx.fillStyle='#2E1A36';roundRect(ctx,X,y,IW,IH,40);ctx.fill();ctx.restore();
+  drawPhoto(ctx,img,e,X,y,IW,IH,{radius:40,bg:'#2E1A36',fg:'rgba(243,230,216,0.45)',font:SERIF_I(340)});
+  y+=IH+64;
+
+  ctx.fillStyle=CREAM;ctx.textAlign='center';
+  const nm=fitText(ctx,e.drinkName,SERIF_I,124,60,IW);
+  textMid(ctx,nm,W/2,y+nameH/2);
   ctx.textAlign='left';
+  y+=nameH+24;
+  const bs=84,bgp=24;
+  drawStars(ctx,W/2+starsWidth(bs,bgp)/2,y+bigH/2,storyTotal(e),bs,bgp,CORAL,OFF);
+  y+=bigH+56;
+  storyRows(e).forEach(([lb,n])=>{
+    ctx.fillStyle=CREAM;ctx.font=SERIF(54);textMid(ctx,lb,X,y+rowH/2);
+    drawStars(ctx,X+IW,y+rowH/2,n,56,20,CORAL,OFF);
+    y+=rowH;
+  });
+}
 
-  const blob=await new Promise(r=>cv.toBlob(r,'image/png',0.95));
-  if(!blob){showToast('Não consegui gerar a imagem');return;}
-  const file=new File([blob],'drink.png',{type:'image/png'});
-  if(navigator.canShare&&navigator.canShare({files:[file]})){
-    try{ await navigator.share({files:[file]}); return; }catch(err){ if(err.name==='AbortError') return; }
+/* 3. Animado: pastel, polaroid inclinada, nome e nota em pílulas de mesma altura */
+function drawAnimado(ctx,e,img){
+  const W=STORY_W,H=STORY_H;
+  ctx.fillStyle='#FFE9D9';ctx.fillRect(0,0,W,H);
+  ctx.fillStyle='#FFC07D';ctx.beginPath();ctx.arc(W-30,170,330,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#C6EEDF';ctx.beginPath();ctx.arc(50,H-110,380,0,Math.PI*2);ctx.fill();
+  const DISP=s=>'800 '+s+'px "Raleway", sans-serif';
+  const X=90, CW=W-180, polH=800, pillH=130, rowH=100, rowGap=20, footH=40;
+  const total=polH+72+pillH+52+4*rowH+3*rowGap+52+footH;
+  let y=Math.round((H-total)/2);
+
+  const pw=820;
+  ctx.save();
+  ctx.translate(W/2,y+polH/2);ctx.rotate(0.035);
+  ctx.save();ctx.shadowColor='rgba(42,33,64,0.18)';ctx.shadowBlur=40;ctx.shadowOffsetY=14;
+  ctx.fillStyle='#fff';ctx.fillRect(-pw/2,-polH/2,pw,polH);ctx.restore();
+  drawPhoto(ctx,img,e,-pw/2+40,-polH/2+40,pw-80,polH-160,{bg:'#FAF8FE',fg:'#D9D2EE',font:DISP(300)});
+  ctx.restore();
+  y+=polH+72;
+
+  const scoreW=300, gap=28, nameW=CW-scoreW-gap;
+  ctx.fillStyle='#FF4D6D';roundRect(ctx,X,y,nameW,pillH,pillH/2);ctx.fill();
+  ctx.fillStyle='#2A2140';roundRect(ctx,X+nameW+gap,y,scoreW,pillH,pillH/2);ctx.fill();
+  ctx.textAlign='center';ctx.fillStyle='#fff';
+  const nm=fitText(ctx,e.drinkName,DISP,76,34,nameW-80);
+  textMid(ctx,nm,X+nameW/2,y+pillH/2);
+  ctx.fillStyle='#FFC94A';ctx.font=DISP(76);
+  textMid(ctx,storyTotal(e)+'/5',X+nameW+gap+scoreW/2,y+pillH/2);
+  ctx.textAlign='left';
+  y+=pillH+52;
+
+  const colors=['#6C4BF6','#12BFA0','#FF9E1F','#FF4D6D'];
+  storyRows(e).forEach(([lb,n],i)=>{
+    ctx.fillStyle='#fff';roundRect(ctx,X,y,CW,rowH,rowH/2);ctx.fill();
+    ctx.fillStyle='#2A2140';ctx.font='500 46px "DM Sans", sans-serif';
+    textMid(ctx,lb,X+56,y+rowH/2);
+    drawStars(ctx,X+CW-56,y+rowH/2,n,46,18,colors[i],'rgba(42,33,64,0.2)');
+    y+=rowH+rowGap;
+  });
+  y+=52-rowGap;
+  ctx.fillStyle='#2A2140';ctx.font=DISP(32);ctx.textAlign='center';
+  withSpacing(ctx,3,()=>textMid(ctx,'NOSSOS DRINKS',W/2,y+footH/2));
+  ctx.textAlign='left';
+}
+
+/* 4. Tipográfico: nome gigante em duas linhas, foto abaixo, notas como números */
+function splitName(name){
+  const s=String(name||'').trim().toUpperCase();
+  const words=s.split(/\s+/).filter(Boolean);
+  if(words.length>1){
+    let best=1,bd=1e9;
+    for(let i=1;i<words.length;i++){
+      const d=Math.abs(words.slice(0,i).join(' ').length-words.slice(i).join(' ').length);
+      if(d<bd){bd=d;best=i;}
+    }
+    return [words.slice(0,best).join(' '),words.slice(best).join(' ')];
   }
+  if(s.length<=4) return [s,''];
+  const k=Math.floor(s.length/2);
+  return [s.slice(0,k),s.slice(k)];
+}
+function drawTipografico(ctx,e,img){
+  const W=STORY_W,H=STORY_H,X=80,CW=W-160;
+  ctx.fillStyle='#EFEAFB';ctx.fillRect(0,0,W,H);
+  const F=s=>'900 '+s+'px "Raleway", sans-serif';
+  const [l1,l2]=splitName(e.drinkName);
+  let size=300; ctx.font=F(size);
+  while(size>90&&Math.max(ctx.measureText(l1).width,ctx.measureText(l2).width)>CW){size-=6;ctx.font=F(size);}
+  ctx.textBaseline='alphabetic';
+  const cap=ctx.measureText('H').actualBoundingBoxAscent;
+  let y=180+cap;
+  ctx.fillStyle='#2A2140';ctx.fillText(fitText(ctx,l1,F,size,size,CW),X,y);
+  if(l2){y+=Math.round(size*0.92);ctx.fillStyle='#FF4D6D';ctx.fillText(fitText(ctx,l2,F,size,size,CW),X,y);}
+  ctx.fillStyle='#2A2140';ctx.font='500 48px "DM Sans", sans-serif';
+  y+=40+ctx.measureText('H').actualBoundingBoxAscent;
+  ctx.fillText(storyTotal(e)+'/5 — nota geral',X,y);
+  y+=48;
+
+  // de baixo para cima: rodapé, números, rótulos; a foto ocupa o que sobra
+  const footBase=H-120, numBase=footBase-96;
+  ctx.font=F(120); const numCap=ctx.measureText('5').actualBoundingBoxAscent;
+  const lblBase=numBase-numCap-36;
+  const photoBottom=lblBase-30-40;
+  drawPhoto(ctx,img,e,X-10,y,CW+20,photoBottom-y,{radius:28,bg:'#fff',fg:'#D9D2EE',font:F(400)});
+
+  const colW=CW/4;
+  storyRows(e).forEach(([lb,n],i)=>{
+    const cx=X+i*colW;
+    ctx.fillStyle='#6D6485';ctx.font='500 30px "DM Sans", sans-serif';
+    withSpacing(ctx,1,()=>ctx.fillText(lb.toUpperCase(),cx,lblBase));
+    ctx.fillStyle='#2A2140';ctx.font=F(120);ctx.fillText(String(n),cx,numBase);
+  });
+  ctx.fillStyle='#6D6485';ctx.font='500 34px "DM Sans", sans-serif';ctx.textAlign='center';
+  ctx.fillText('nossos drinks',W/2,footBase);ctx.textAlign='left';
+}
+
+async function storyFontsReady(){
+  if(!document.fonts||!document.fonts.load) return;
+  const list=['400 40px "Courier Prime"','700 40px "Courier Prime"','italic 500 40px "Playfair Display"',
+    '400 40px "Playfair Display"','800 40px "Raleway"','900 40px "Raleway"','500 40px "DM Sans"'];
+  try{ await Promise.all(list.map(f=>document.fonts.load(f))); }catch(err){}
+}
+
+let storyFiles={}, storyRun=0, storyUrls=[];
+async function openStoryPicker(id){
+  const e=entries.find(x=>x.id===id); if(!e) return;
+  const run=++storyRun; storyFiles={};
+  storyUrls.forEach(u=>URL.revokeObjectURL(u)); storyUrls=[];
+  const box=document.getElementById('models');
+  box.innerHTML=STORY_MODELS.map(m=>
+    '<button type="button" class="model" data-m="'+m.id+'" onclick="shareStory(\''+m.id+'\')">'+
+    '<span class="frame">Preparando…</span>'+
+    '<span class="nm">'+m.nome+(m.padrao?'<small>padrão</small>':'')+'</span></button>').join('');
+  document.getElementById('ov-story').classList.add('active');
+
+  await storyFontsReady();
+  let img=null;
+  if(e.drinkPhoto){ try{ img=await loadImg(e.drinkPhoto); }catch(err){} }
+  for(const m of STORY_MODELS){
+    if(run!==storyRun) return;
+    const cv=document.createElement('canvas');cv.width=STORY_W;cv.height=STORY_H;
+    m.draw(cv.getContext('2d'),e,img);
+    const blob=await new Promise(r=>cv.toBlob(r,'image/jpeg',0.92));
+    if(run!==storyRun) return;
+    const fr=box.querySelector('[data-m="'+m.id+'"] .frame');
+    if(!blob){ fr.textContent='Não consegui gerar'; continue; }
+    const name=slug(e.drinkName)+'-'+m.id+'.jpg';
+    storyFiles[m.id]={blob,name,file:new File([blob],name,{type:'image/jpeg'})};
+    const url=URL.createObjectURL(blob); storyUrls.push(url);
+    fr.innerHTML='<img alt="Modelo '+m.nome+'" src="'+url+'">';
+  }
+}
+function closeStoryPicker(){
+  storyRun++;
+  document.getElementById('ov-story').classList.remove('active');
+}
+function shareStory(mid){
+  const s=storyFiles[mid];
+  if(!s){ showToast('Ainda preparando a imagem…'); return; }
+  // nenhum await antes do share: o navegador exige o gesto do toque
+  if(navigator.canShare&&navigator.canShare({files:[s.file]})){
+    navigator.share({files:[s.file]})
+      .then(()=>closeStoryPicker())
+      .catch(err=>{ if(err&&err.name!=='AbortError') downloadBlob(s.blob,s.name); });
+    return;
+  }
+  downloadBlob(s.blob,s.name);
+}
+function downloadBlob(blob,name){
   const a=document.createElement('a');
-  a.href=URL.createObjectURL(blob);
-  a.download=(e.drinkName||'drink').replace(/\s+/g,'-').toLowerCase()+'.png';
-  a.click();
+  a.href=URL.createObjectURL(blob); a.download=name;
+  document.body.appendChild(a); a.click(); a.remove();
   setTimeout(()=>URL.revokeObjectURL(a.href),4000);
   showToast('Imagem salva — poste nos stories');
 }
