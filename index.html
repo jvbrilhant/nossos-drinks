@@ -1053,8 +1053,8 @@ function drawAnimado(ctx,e,img){
   ctx.fillStyle='#FFC07D';ctx.beginPath();ctx.arc(W-30,170,330,0,Math.PI*2);ctx.fill();
   ctx.fillStyle='#C6EEDF';ctx.beginPath();ctx.arc(50,H-110,380,0,Math.PI*2);ctx.fill();
   const DISP=s=>'800 '+s+'px "Raleway", sans-serif';
-  const X=90, CW=W-180, polH=800, pillH=130, rowH=100, rowGap=20, footH=40;
-  const total=polH+72+pillH+52+4*rowH+3*rowGap+52+footH;
+  const X=90, CW=W-180, polH=800, pillH=130, rowH=100, rowGap=20;
+  const total=polH+72+pillH+52+4*rowH+3*rowGap;
   let y=Math.round((H-total)/2);
 
   const pw=820;
@@ -1085,10 +1085,6 @@ function drawAnimado(ctx,e,img){
     drawStars(ctx,X+CW-56,y+rowH/2,n,46,18,colors[i],'rgba(42,33,64,0.2)');
     y+=rowH+rowGap;
   });
-  y+=52-rowGap;
-  ctx.fillStyle='#2A2140';ctx.font=DISP(32);ctx.textAlign='center';
-  withSpacing(ctx,3,()=>textMid(ctx,'NOSSOS DRINKS',W/2,y+footH/2));
-  ctx.textAlign='left';
 }
 
 /* 4. Tipográfico: nome gigante em duas linhas, foto abaixo, notas como números */
@@ -1124,8 +1120,8 @@ function drawTipografico(ctx,e,img){
   ctx.fillText(storyTotal(e)+'/5 — nota geral',X,y);
   y+=48;
 
-  // de baixo para cima: rodapé, números, rótulos; a foto ocupa o que sobra
-  const footBase=H-120, numBase=footBase-96;
+  // de baixo para cima: números, rótulos; a foto ocupa o que sobra
+  const numBase=H-180;
   ctx.font=F(120); const numCap=ctx.measureText('5').actualBoundingBoxAscent;
   const lblBase=numBase-numCap-36;
   const photoBottom=lblBase-30-40;
@@ -1138,8 +1134,6 @@ function drawTipografico(ctx,e,img){
     withSpacing(ctx,1,()=>ctx.fillText(lb.toUpperCase(),cx,lblBase));
     ctx.fillStyle='#2A2140';ctx.font=F(120);ctx.fillText(String(n),cx,numBase);
   });
-  ctx.fillStyle='#6D6485';ctx.font='500 34px "DM Sans", sans-serif';ctx.textAlign='center';
-  ctx.fillText('nossos drinks',W/2,footBase);ctx.textAlign='left';
 }
 
 async function storyFontsReady(){
